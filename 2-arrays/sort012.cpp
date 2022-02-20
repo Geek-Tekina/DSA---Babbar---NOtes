@@ -1,20 +1,35 @@
-#include <iostream>
-#include<vector>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    // vector<int> v {1,4,4,5,3};
-    int arr[] = {0,1,0,2};
-    int n = 4;
-    vector<int> v0,v1,v2;
-    for(int i=0;i<n ; i++){
-        if(arr[i]==0)  v0.push_back(0);
-        else if (arr[i]==1) v1.push_back(1);
-        else v2.push_back(2);
-    }
-    for(auto i:v0) cout<< i << " ";
-    for(auto i:v1) cout<< i << " ";
-    for(auto i:v2) cout<< i << " ";
-    return 0;
+void sort012(int a[], int arr_size){
+	int lo = 0;
+	int hi = arr_size - 1;
+	int mid = 0;
+
+	while (mid <= hi) {
+		switch (a[mid]) {
+		case 0:
+			swap(a[lo++], a[mid++]);
+			break;
+		case 1:
+			mid++;
+			break;
+		case 2:
+			swap(a[mid], a[hi--]);
+			break;
+		}
+	}
+}
+
+void printArray(int arr[], int arr_size){
+	for (int i = 0; i < arr_size; i++)
+		cout << arr[i] << " ";
+}
+
+int main(){
+	int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	sort012(arr, n);
+	printArray(arr, n);
+	return 0;
 }
