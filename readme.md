@@ -1,10 +1,16 @@
 # README.MD
 
-<br>
-<details>
-<summary>
-STL
-</summary>
+1. [STL](#stl)
+2. [Array](#arrays)
+3. [Linked List](#linked-list)
+4. [Recursion & Backtracking](#recursion--backtracking)
+5. [Greedy Algos](#greedy-algos)
+6. [Binary Search](#binary-search)
+7. [Stacks and Queues](#stacks-and-queues)
+
+<hr>
+
+## STL
 
 The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It is a library of **container** classes, algorithms, and **iterators**. It is a generalized library and so, its components are parameterized.
 
@@ -21,30 +27,25 @@ Operations of iterators :-
 - end() : to return the after end position of the container.
 - more at https://www.geeksforgeeks.org/iterators-c-stl/
 
-</details>
+<hr>
 
-<details>
-<summary>
-Arrays
-</summary>
-
+## Arrays
 Do it from [Love Babbar Sheet](https://docs.google.com/spreadsheets/d/1sDSzwTi8mNp7IN8dL1rhZ0D1tCQQhMaAGeLptTg7tQU/edit?usp=sharing)
 
-</details>
+<hr>
 
-<details>
-<summary>
-Linked List
-</summary>
+## Linked List
 
-from [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
-</details>
+- [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+- detecting a loop in lined list or duplicate in array ?
+    - Modification Method : traverse each linked list and point them to null, if you come again on a node which is already pointing to null, then that is where loop begins, in case array turn the positive integers in negative and if you come accross a negative integer then it is duplicated.\
+    - Extra Space Method : use unordered_set to store the addresses of the nodes and in case of aray use maps. 
+    - Optimisedd Method : Use `Floyd'd tortoise and hare algorithm` to detect cycle. It is kind of Two pointer approach, as one pointer is moving 1 at a time and another is moving 2 at a time.
+- same algo can be applied to `find middle node in LL in O(n)`
 
-<details>
-<summary>
-Recursion & Backtracking
-</summary>
-<br>
+<hr>
+
+## Recursion & Backtracking
 
 Recursion
 - [Youtube by Aditya Verma](https://www.youtube.com/watch?v=kHi1DUhp9kM&list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY)
@@ -84,11 +85,8 @@ Backtracking
 - for theory intro : https://www.youtube.com/watch?v=DKCbsiDBN6c
 - Strivers sheet and then Love Babbar
 - `rat trap in a maze` is a famous concept problem 
-</details>
 
-
-
-<br>
+<hr>
 
 ## Greedy Algos
 - converting arrays to a structure and `comparators` for sorting structure
@@ -96,10 +94,10 @@ Backtracking
     - Activity Selection
     - Fractional Knapsack
     - Minimum No. of coins
-    - **Job sequencing**
+    - >Job sequencing !!!
 
 
-<br>
+<hr>
 
 ## Binary Search
 - Instead of `mid = start+end/2` use `mid = start + (end-start)/2`, to remove integer overflow
@@ -111,7 +109,7 @@ Backtracking
     - f(n) is actually responsible for checking if the current value is valid or not.
 
 
-<br>
+<hr>
 
 ## Stacks and Queues
 - Implementation Of Stacks 
@@ -143,6 +141,8 @@ Backtracking
     - [Maximum of minimum for every window size](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380950)
 
 
-Trie
+<hr>
+
+## Trie
 - Unacademy lectures 
 - Strivers questions
