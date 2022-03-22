@@ -10,7 +10,7 @@
 
 <hr>
 
-## STL
+### STL
 
 The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It is a library of **container** classes, algorithms, and **iterators**. It is a generalized library and so, its components are parameterized.
 
@@ -29,12 +29,12 @@ Operations of iterators :-
 
 <hr>
 
-## Arrays
+### Arrays
 Do it from [Love Babbar Sheet](https://docs.google.com/spreadsheets/d/1sDSzwTi8mNp7IN8dL1rhZ0D1tCQQhMaAGeLptTg7tQU/edit?usp=sharing)
 
 <hr>
 
-## Linked List
+### Linked List
 
 - [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 - detecting a loop in lined list or duplicate in array ?
@@ -45,7 +45,7 @@ Do it from [Love Babbar Sheet](https://docs.google.com/spreadsheets/d/1sDSzwTi8m
 
 <hr>
 
-## Recursion & Backtracking
+### Recursion & Backtracking
 
 Recursion
 - [Youtube by Aditya Verma](https://www.youtube.com/watch?v=kHi1DUhp9kM&list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY)
@@ -88,7 +88,7 @@ Backtracking
 
 <hr>
 
-## Greedy Algos
+### Greedy Algos
 - converting arrays to a structure and `comparators` for sorting structure
 - Most commonly asked greedy algos
     - Activity Selection
@@ -99,7 +99,7 @@ Backtracking
 
 <hr>
 
-## Binary Search
+### Binary Search
 - Instead of `mid = start+end/2` use `mid = start + (end-start)/2`, to remove integer overflow
 - In cases you dont know the high limit or the array is **infinite**, use Binary Search in reverse manner that is keep increasing the `high to 2*high and start to high` until condition is met.
 - In hard questions, the basic goal should be
@@ -111,7 +111,7 @@ Backtracking
 
 <hr>
 
-## Stacks and Queues
+### Stacks and Queues
 - Implementation Of Stacks 
     - Using Array
     - Using Linked List
@@ -143,6 +143,6 @@ Backtracking
 
 <hr>
 
-## Trie
+### Trie
 - Unacademy lectures 
 - Strivers questions
