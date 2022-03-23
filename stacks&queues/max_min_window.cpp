@@ -16,7 +16,7 @@ Approach 1 : to run a loop for all elements
         and in right find the same for each element,
     now it will make the T.C. O(n*n)
 
-Efficient Apporach : to find the reach value, use Next greater Element technique
+Efficient Apporach : to find the reach value, use Next Greater Element technique
 in this technique, left and right two arrays are maintained storing the index of smaller elements
 for corresponding index.
 such that the reach for i will be, len = r[i] - l[i] - 1 
