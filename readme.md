@@ -29,10 +29,49 @@ Operations of iterators :-
 
 <hr>
 
-### Arrays
-Do it from [Love Babbar Sheet](https://docs.google.com/spreadsheets/d/1sDSzwTi8mNp7IN8dL1rhZ0D1tCQQhMaAGeLptTg7tQU/edit?usp=sharing)
+### Arrays and Strings
+<!-- Do it from [Love Babbar Sheet](https://docs.google.com/spreadsheets/d/1sDSzwTi8mNp7IN8dL1rhZ0D1tCQQhMaAGeLptTg7tQU/edit?usp=sharing) -->
+
+- Notes
+    - `int max = 1e6; int a[max];` is valid and is the maximum storage for array with 10^6 elemnts.
+    - `int a[n]` is possible
+    - `sort(arr, arr+n)` can be used to sort using `<algorithm>` header file
+- Basics of array
+    - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381276)
+    - [Rotate array](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381279)
+    - [kth largest and smallest element](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381281?leftPanelTab=0) !!! ; use QuickSelect to solve in O(n)
+- Basics of 2D array
+    - How are they stored - row major and column major
+    - Wave traversal (using one nested and one insert operation to avoid TLE)
+    - Spiral traversal 
+- Basics of strings
+    - How strings are stored? (check just below)
+    - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381763)
+    - [Check permutation](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381766) ; use hashmap for O(n)
+    - For questions with split on the basis of a delimiter concept,
+```cpp
+    for(int i=0 ; i<input.size() ; ++i){
+        word += input[i];
+        if(input[i] == ' '){
+            result.insert(0, word);
+            word = "";
+        }
+    }
+```
+```txt
+the general idea is that the string class will contain a pointer to a region of memory where the actual contents of the string are stored. Two common implementations are storing 
+- 3 pointers (begin of the allocated region and data, end of data, end of allocated region) 
+- or a pointer (begin of allocated region and data) and two integers (number of characters in the string and number of allocated bytes).
+
+When new data is appended to the string, if it fits the allocated region it will just be written and the size/end of data pointer will be updated accordingly. If the data does not fit in the region a new buffer will be created and the data copied
+```
+- Sorting
+    - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118822/offering/1382158)
+
+**REFF** : [Parikh jain list](https://dynalist.io/d/f8y9_YRZW6Kt5-hLfqkW3kDS) 
 
 <hr>
+
 
 ### Linked List
 
@@ -121,7 +160,7 @@ Backtracking
     - Using Linked List
     - [Reverse A Queue](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380946) ; use a stack to reverse and then store back in the queue
 - Implementation Important Questions
-    - [Min Stack](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380937) ; Create a stack to store new value if its less than top of min stack
+    - [Min Stack](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380937) ; !!! [Soln](https://takeuforward.org/data-structure/implement-min-stack-o2n-and-on-space-complexity/)
     - [Stack Using 2 Queues](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380940) ; [Soln](https://www.youtube.com/watch?v=jDZQKzEtbYQ)
     - [Queue Using 2 Stacks](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380939) ; 
     - [Two Stacks](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380938) ; divides array in two stacks one from L one from R, R is given too.
@@ -137,8 +176,9 @@ Backtracking
     - Previous Greater Element ; (++i, asc)
     - [Previous Small/ Nearest supporter](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380952) ; (++i, desc)
     - Next Small Element ; (--i, dsc)
+    - Index based prev/next greater/smaller questions e.g. [Stock Span](https://leetcode.com/problems/online-stock-span/), [Area of rect](https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/)
 - Hard Level
-    - [LRU Cache Implementation](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380941) !!!!
+    - [LRU Cache Implementation](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380941) ; [Concept](https://www.youtube.com/watch?v=xDEuM5qa0zg&t=774s) + [code](https://www.youtube.com/watch?v=Xc4sICC8m4M&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&t=0s)
     - [Execution Time](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380951) !!!!
     - [Maximum of minimum for every window size](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380950)
 

@@ -11,16 +11,15 @@ element found in the window size and no lesser element can now be find.
 */
 
 /*
-Approach 1 : to run a loop for all elements
-    and for each element find Nearest Smaller Element in left 
-        and in right find the same for each element,
-    now it will make the T.C. O(n*n)
-
-Efficient Apporach : to find the reach value, use Next Greater Element technique
-in this technique, left and right two arrays are maintained storing the index of smaller elements
-for corresponding index.
-such that the reach for i will be, len = r[i] - l[i] - 1 
-                        and result[len] = max(result[len], arr[i])
+Approach : using nextSmaller and previourSmaller methods
+    firstly initialise l[n], r[n] two arrays -1
+    find prevSmall and nextSmall in these arrays respectively 
+    initialise result[n+1] with 0 value
+    To run a loop for all elements and calculate reach 
+        such that the reach for i will be, len = r[i] - l[i] - 1 
+        and result[len] = max(result[len], arr[i])
+    and now if any result[i] is 0 then put the value of result[i+1],
+    but make sure it traverse in --i manner
 
 for explanation - https://youtu.be/CK8PIAF-m2E
 */
