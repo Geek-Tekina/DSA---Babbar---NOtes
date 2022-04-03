@@ -49,24 +49,57 @@ Operations of iterators :-
     - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381763)
     - [Check permutation](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381766) ; use hashmap for O(n)
     - For questions with split on the basis of a delimiter concept,
-```cpp
-    for(int i=0 ; i<input.size() ; ++i){
-        word += input[i];
-        if(input[i] == ' '){
-            result.insert(0, word);
-            word = "";
+    ```cpp
+        for(int i=0 ; i<input.size() ; ++i){
+            word += input[i];
+            if(input[i] == ' '){
+                result.insert(0, word);
+                word = "";
+            }
         }
-    }
-```
-```txt
-the general idea is that the string class will contain a pointer to a region of memory where the actual contents of the string are stored. Two common implementations are storing 
-- 3 pointers (begin of the allocated region and data, end of data, end of allocated region) 
-- or a pointer (begin of allocated region and data) and two integers (number of characters in the string and number of allocated bytes).
-
-When new data is appended to the string, if it fits the allocated region it will just be written and the size/end of data pointer will be updated accordingly. If the data does not fit in the region a new buffer will be created and the data copied
-```
+    ```
+    ```txt
+    the general idea is that the string class will contain a pointer to a region of memory 
+    where the actual contents of the string are stored. Two common implementations are storing 
+    - 3 pointers (begin of the allocated region and data, end of data, end of allocated region) 
+    - or a pointer (begin of allocated region and data) and two integers (number of characters 
+        in the string and number of allocated bytes).
+    
+    When new data is appended to the string, if it fits the allocated region
+    it will just be written and the size/end of data pointer will be updated accordingly.
+    If the data does not fit in the region a new buffer will be created and the data copied
+    ```
 - Sorting
+    ```cpp
+    #include<algorithm>
+    sort(vec.begin(), vec.end(), comp);     // can use a static bool comp(Obj a, Obj b){...}
+                                            // for asc, it should return true if a is smaller
+    sort(arr, arr+n);
+    stable_sort(arr, arr+n);                // for stable sort
+    ```
+    - [Sort array in wave form](https://www.geeksforgeeks.org/sort-array-wave-form-2/#)
+    - [Sort array acc to the count of set bits](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118822/offering/1382140?leftPanelTab=1) ; using `__builtin_popcount(a)` to count set bits
+    - [Relative sorting](https://leetcode.com/problems/relative-sort-array/) ; [Soln](https://www.youtube.com/watch?v=bNuMPAuQN4g)
+    - Med/Hard, [Min number of swaps](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)
     - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118822/offering/1382158)
+- Algorithms 
+    - [Dutch National Flag](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381862) ; If 3 different elements are given to sort, then DNF can be used to sort in just `O(n)` time
+    - [Two Pointer Approach](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376553)
+        - [Length of the max  mountain subarray](https://leetcode.com/problems/longest-mountain-in-array/) ; [for i, run 2 nested j loops and then i = j](https://www.youtube.com/watch?v=rh2Bkul2zzQ)
+        - triplets - withEqualZero/ sumEqualToThird/ equalToGivenSum ; [do check out the solution bec shrinking pointers is important](arrays_cn/3sum.cpp)
+        - Container with most water ; keep the pointers at both end and shrink just on the basis of small value 
+        - Easy, [Is subequence](arrays_cn/is_subsq.cpp)
+        - Easy, Remove Duplicates ; [soln](arrays_cn/remove_dup.cpp)
+        - [Valid String](https://leetcode.com/problems/valid-parenthesis-string/submissions/) ; create open and star stacks and store the indices, now as the `)` pops all the required `( or  *`, use the next loop to check if `(` is left or not 
+        - Shortest substring with all characters !!!!
+        - Hard, [Transform one string to another](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/)
+    - [Sliding Window Algorithm](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376573)
+        - 
+    - [Kadane's Algo](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381861)
+
+
+
+<br>
 
 **REFF** : [Parikh jain list](https://dynalist.io/d/f8y9_YRZW6Kt5-hLfqkW3kDS) 
 
