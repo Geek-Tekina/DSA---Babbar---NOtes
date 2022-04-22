@@ -1,3 +1,5 @@
+`find . -type f  ! -name "*.*"  -delete`
+
 # README.MD
 
 1. [STL](#stl)
@@ -92,10 +94,9 @@ Operations of iterators :-
         - Easy, Remove Duplicates ; [soln](arrays_cn/remove_dup.cpp)
         - [Valid String](https://leetcode.com/problems/valid-parenthesis-string/submissions/) ; create open and star stacks and store the indices, now as the `)` pops all the required `( or  *`, use the next loop to check if `(` is left or not 
         - Shortest substring with all characters !!!!
-        - Hard, [Transform one string to another](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/)
-    - [Sliding Window Algorithm](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376573)
-        - 
-    - [Kadane's Algo](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381861)
+        - Hard, [Transform one string to another](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/) !!!!
+    - [Sliding Window Algorithm](sliding_window.md)
+    - [Kadane's Algo](sliding_window)
 
 
 

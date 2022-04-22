@@ -1,5 +1,6 @@
 - Use `#include <bits/stdc++.h>` instead of many includes.
 - `++i` is always better than i++, as sometimes i++ creates a copy of the object
+- what is `modulo 10e9 + 7`
 - some concepts to learn thoroughly
     - stl
     - two pointer approach
@@ -47,5 +48,4 @@ Time Complexity from given n-based constraint is based on the fact that `online-
 
 <br>
 
-reff
-- https://codeforces.com/blog/entry/64218
+**for reff** : https://codeforces.com/blog/entry/64218
