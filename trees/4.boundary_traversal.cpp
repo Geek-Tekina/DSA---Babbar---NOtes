@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "node.h"
 using namespace std;
 
 /*
@@ -14,17 +15,6 @@ the whole problem is divided into 4 parts - root, leftB, leafB, rightB
     easily solved by first recursing and then printing the data. second thing is to iterate use the `leftB`
     logic only, first check the right element if not present then left node.
 */
-
-class node {
-    public:
-    int data;
-    node *left, *right;
-    node(int val){
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 void leftb(node* root){
     if(root == NULL)    return;

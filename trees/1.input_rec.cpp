@@ -1,21 +1,10 @@
 #include <iostream>
 #include <vector>
+#include "node.h"
 using namespace std;
 
 int i = -1;
 vector<int> v = {1,2,-1,-1,3,4,-1,-1,-1};
-
-class node {
-    public: 
-        int data;
-        node *left, *right;
-
-    node(int val){
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 node* input(){
     int temp = v[++i];      // cin >> temp;

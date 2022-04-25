@@ -1,18 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include "node.h"
 using namespace std;
-
-class node {
-    public:
-    int data;
-    node *left, *right;
-    node(int val){
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 /*
 here nodes are pushed in the `q` and their front value is used as the root 

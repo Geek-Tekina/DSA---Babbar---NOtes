@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include "node.h"
 using namespace std;
 
 /*
@@ -8,17 +9,6 @@ using namespace std;
 - but use a toggler to see whether to store in revserse order or not
 - use a nested while loop of current level's size to iterate over only till this level nodes
 */
-
-class node {
-    public:
-    int data;
-    node *left, *right;
-    node(int val){
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 void zigzag(node* root){
     queue<node*> q;

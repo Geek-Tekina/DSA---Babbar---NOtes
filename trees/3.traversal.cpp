@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include "node.h"
 using namespace std;
 
 /*
@@ -14,17 +15,6 @@ level-order -> a queue is maintained such that front stores current level nodes
     of the queue making it traversing level wise.
     A while loop is iterated until queue becomes empty.  
 */
-
-class node {
-    public:
-    int data;
-    node *left, *right;
-    node(int val){
-        data = val;
-        left = NULL;
-        right = NULL;
-    }
-};
 
 void preorder(node* root){
     if(root == NULL)    return;
