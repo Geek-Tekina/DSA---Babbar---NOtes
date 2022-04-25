@@ -3,12 +3,15 @@
 # README.MD
 
 1. [STL](#stl)
-2. [Array](#arrays)
+2. [Array](#arrays-and-strings)
 3. [Linked List](#linked-list)
 4. [Recursion & Backtracking](#recursion--backtracking)
 5. [Greedy Algos](#greedy-algos)
 6. [Binary Search](#binary-search)
 7. [Stacks and Queues](#stacks-and-queues)
+8. [Tress (Binary Trees and BST)](trees.md)
+<!-- 9. Graphs
+10. Tries -->
 
 <hr>
 
@@ -84,6 +87,7 @@ Operations of iterators :-
     - [Relative sorting](https://leetcode.com/problems/relative-sort-array/) ; [Soln](https://www.youtube.com/watch?v=bNuMPAuQN4g)
     - Med/Hard, [Min number of swaps](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/)
     - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118822/offering/1382158)
+
 - Algorithms 
     - [Dutch National Flag](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118820/offering/1381862) ; If 3 different elements are given to sort, then DNF can be used to sort in just `O(n)` time
     - [Two Pointer Approach](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118509/offering/1376553)
@@ -96,9 +100,12 @@ Operations of iterators :-
         - Shortest substring with all characters !!!!
         - Hard, [Transform one string to another](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/) !!!!
     - [Sliding Window Algorithm](sliding_window.md)
-    - [Kadane's Algo](sliding_window)
+    - [Kadane's Algo](sliding_window.md)
 
-
+- Mixed Problems
+    - [Find 2nd largest number](https://www.geeksforgeeks.org/find-second-largest-element-array/)
+    - Inpace rotate array by 90 degrees : apply transpose (i,j) to (j,i) and then reverse the columns    
+    - [Anagram Difference](arrays_cn/anagram_diff.cpp)
 
 <br>
 
@@ -110,6 +117,7 @@ Operations of iterators :-
 ### Linked List
 
 - [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+- when creating a new node always write `node* temp = new node();` and do create a constructor.
 - detecting a loop in lined list or duplicate in array ?
     - Modification Method : traverse each linked list and point them to null, if you come again on a node which is already pointing to null, then that is where loop begins, in case array turn the positive integers in negative and if you come accross a negative integer then it is duplicated.\
     - Extra Space Method : use unordered_set to store the addresses of the nodes and in case of aray use maps. 
@@ -167,6 +175,8 @@ Backtracking
     - Activity Selection
     - Fractional Knapsack
     - Minimum No. of coins
+    - [Merge Intervals](https://www.geeksforgeeks.org/merging-intervals/)
+    - [Min Platforms](https://www.youtube.com/watch?v=dxVcMDI7vyI&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=47)
     - >Job sequencing !!!
 
 
@@ -180,7 +190,6 @@ Backtracking
     - this monotonic series will have a computation function, f(n) and initially dont mind it,
     - find a low and a high, generally it is based on the result domain of the question and then result is cross verified if it can make the question condition true.
     - f(n) is actually responsible for checking if the current value is valid or not.
-
 
 <hr>
 
