@@ -9,7 +9,7 @@
 5. [Greedy Algos](#greedy-algos)
 6. [Binary Search](#binary-search)
 7. [Stacks and Queues](#stacks-and-queues)
-8. [Tress (Binary Trees and BST)](trees.md)
+8. [Trees (Binary Trees and BST)](trees.md)
 <!-- 9. Graphs
 10. Tries -->
 
@@ -118,6 +118,7 @@ Operations of iterators :-
 
 - [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
 - when creating a new node always write `node* temp = new node();` and do create a constructor.
+- `delete ptr` can be used to delete a pointer block.
 - detecting a loop in lined list or duplicate in array ?
     - Modification Method : traverse each linked list and point them to null, if you come again on a node which is already pointing to null, then that is where loop begins, in case array turn the positive integers in negative and if you come accross a negative integer then it is duplicated.\
     - Extra Space Method : use unordered_set to store the addresses of the nodes and in case of aray use maps. 

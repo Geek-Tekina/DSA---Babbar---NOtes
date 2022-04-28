@@ -5,6 +5,8 @@ class node {
     public: 
         int data;
         node *left, *right;
+        // only for vertical orderes, topview and bottomview
+        int hd;
 
     node(int val){
         data = val;
@@ -18,6 +20,20 @@ void preorder(node* root){
     cout << root->data << " ";
     preorder(root->left);
     preorder(root->right);
+}
+
+void inorder(node* root){
+    if(!root)   return;
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->right);
+}
+
+void postorder(node* root){
+    if(!root)   return;
+    preorder(root->left);
+    preorder(root->right);
+    cout << root->data << " ";
 }
 
 node* init(){
