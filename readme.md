@@ -11,7 +11,7 @@
 7. [Stacks and Queues](#stacks-and-queues)
 8. [Trees (Binary Trees and BST)](trees.md)
 <!-- 9. Graphs
-10. Tries -->
+10. DP -->
 
 <hr>
 
