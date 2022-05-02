@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-// since we were supposed to deal with unique characters we thought of set and map
+// since we were supposed to deal with unique characters so we thought of set and map
 // since the freq count was necessary so we used map
 
 // variable sized ws are broken into 3 patrs - extend, calculate and then shrink

@@ -10,8 +10,7 @@
 6. [Binary Search](#binary-search)
 7. [Stacks and Queues](#stacks-and-queues)
 8. [Trees (Binary Trees and BST)](trees.md)
-<!-- 9. Graphs
-10. DP -->
+9. [Graphs](graphs.md)
 
 <hr>
 
