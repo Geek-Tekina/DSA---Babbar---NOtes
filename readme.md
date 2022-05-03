@@ -2,6 +2,7 @@
 
 # README.MD
 
+0. [Pointers](pointers.cpp)
 1. [STL](#stl)
 2. [Array](#arrays-and-strings)
 3. [Linked List](#linked-list)
