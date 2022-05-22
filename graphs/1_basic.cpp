@@ -44,17 +44,24 @@ class GraphFixed {
 
 class GraphDyn {
     int n;
-    // list is pointing to fist vector, later we will specidy array for this list.
+    int **mat;
+    // list is pointing to fist vector, later we will specify array for this list.
     vector<int> *list;   
     public:
         GraphDyn(int nodes){
+            mat = new int*[nodes];
+            for(int i=0 ; i<nodes ; ++i){
+                mat[i] = new int[nodes];
+                for(int j=0 ; j<nodes; ++j)
+                    mat[i][j] = 0;
+            }
             n = nodes;
             list = new vector<int>[nodes];
 
         }
         void addEdge(int source, int dest){
             (list + source)->push_back(dest);
-            (list + dest)->push_back(source);
+            (list + dest)->push_back(source); 
         }
         void print(){
             for(int i=0 ;  i < n ; ++i){
@@ -63,6 +70,11 @@ class GraphDyn {
                     cout << conNodes << " ";
             }
             cout << "\n-------\n";
+            for(int i=0 ; i<n ; ++i){
+                for(int j=0 ; j<n ; ++j)
+                    cout << mat[i][j] << " ";
+                cout << "\n";
+            }
         }
 };
 
@@ -72,7 +84,7 @@ int main(){
     g1.addEdge(2,4);
     g1.addEdge(0,3);
     g1.addEdge(0,1);
-    g1.print();
+    // g1.print();
 
     GraphDyn g2 = GraphDyn(5);
     g2.addEdge(1,2);
