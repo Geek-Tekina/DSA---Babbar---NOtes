@@ -52,6 +52,5 @@ class Graph {
 
 int main(){
     Graph g = new Graph(5);
-    //
     return 0;
 }
