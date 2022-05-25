@@ -27,3 +27,12 @@
             - dfsCheck()? it will check the adjacent 8 cells, and if it is 1 then again check that cell adjacent, but make sure to mark the cells as visited to prevent it from infinite loop.
             - use a count counter to store the temp answer
         ```
+- MST
+    - [Detect cycle in Directed Graph](graphs/5_union-find.md)
+    - [Kruskal's Algo](graphs/5_kruskal.cpp) ;  same as above
+    - [Prims's Algo](graphs/6_prims.cpp)
+- [Dijkstra](graphs/7_dijkstra.cpp)
+    - the notes must be positive and no-negative-cycles
+    - the code is same as prim's only the relaxation is updated
+    - for prims it was `weight[v] > graph[u][v]`, where we are checking Node_V->B is better or previousNode->B
+    - for dijsktra it is, `weight[u] != INT_MAX && weight[v] > weight[u] + graph[u][v]`, where first we are checking the current node is not infinity and then relax it.
