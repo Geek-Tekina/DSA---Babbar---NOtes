@@ -31,8 +31,12 @@
     - [Detect cycle in Directed Graph](graphs/5_union-find.md)
     - [Kruskal's Algo](graphs/5_kruskal.cpp) ;  same as above
     - [Prims's Algo](graphs/6_prims.cpp)
+        - parent array : stores "parent i.e. source" at destination value and hence `parent[v] = u, for u-u`. initialises with `parent[0] = -1`
+        - weight array : to store the weight of the visited and adjacent nodes, else INT_MAX
+        - visited array
 - [Dijkstra](graphs/7_dijkstra.cpp)
     - the notes must be positive and no-negative-cycles
     - the code is same as prim's only the relaxation is updated
     - for prims it was `weight[v] > graph[u][v]`, where we are checking Node_V->B is better or previousNode->B
     - for dijsktra it is, `weight[u] != INT_MAX && weight[v] > weight[u] + graph[u][v]`, where first we are checking the current node is not infinity and then relax it.
+- [Kahn's Algo or Topological Sorting](graphs/8_topological.cpp)
