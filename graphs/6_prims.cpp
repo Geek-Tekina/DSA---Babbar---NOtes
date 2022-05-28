@@ -24,7 +24,7 @@ int findNextConnectedNode(){
     return minIndex;
 }
 
-void prims(){
+void shortestPath(){
     int parent[V];
 
     for(int i=0 ; i<V ; ++i){
@@ -55,6 +55,6 @@ void prims(){
 }
 
 int main(){
-    prims();
+    shortestPath();
     return 0;
 }

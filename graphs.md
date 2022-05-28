@@ -34,9 +34,22 @@
         - parent array : stores "parent i.e. source" at destination value and hence `parent[v] = u, for u-u`. initialises with `parent[0] = -1`
         - weight array : to store the weight of the visited and adjacent nodes, else INT_MAX
         - visited array
-- [Dijkstra](graphs/7_dijkstra.cpp)
+- Shortest Path - [Dijkstra](graphs/7_dijkstra.cpp)
     - the notes must be positive and no-negative-cycles
     - the code is same as prim's only the relaxation is updated
     - for prims it was `weight[v] > graph[u][v]`, where we are checking Node_V->B is better or previousNode->B
     - for dijsktra it is, `weight[u] != INT_MAX && weight[v] > weight[u] + graph[u][v]`, where first we are checking the current node is not infinity and then relax it.
 - [Kahn's Algo or Topological Sorting](graphs/8_topological.cpp)
+- [Rotten Oranges](graphs/9_rotten_oranges.cpp) ; similar logic for [Shortest Path in Binary Matrix](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381547?leftPanelTab=3)
+    ```cpp
+    /*
+    while dealing with logic of BFS and "parallely processing",
+    queues should be used to process the elements, and
+    get the size of the queue and then in one iteration process thee elements till these size 
+    */
+        while(!q.empty())
+            int size = q.size();
+            while(size--){
+                //
+            }
+    ```
