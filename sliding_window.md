@@ -56,7 +56,7 @@ for(j = 0 to n){
 - [First negative number in every window of size k](arrays_cn/sliding_windows/first_neg_of_k.cpp)
 - [Find count of occurences of anagrams of a pattern in a string](arrays_cn/sliding_windows/anagram_count.cpp) ; use maps
     - Find count of a pattern in a string ; **KMP**
----
+
 -  **not from sliding window**, Subarray Sum Equals K (prefix sum)
     ```cpp
     // the question solved by Aditya Verma is for only positive integers and
