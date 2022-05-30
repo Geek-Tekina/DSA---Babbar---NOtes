@@ -18,11 +18,16 @@ NOTE :
     Conclusion : 
     1. If you are pointing to an existing variable then simply,
         ptr = list (if array object) e.g. ptr = arr, etc
-        ptr = &a, (if single object) e.g. &a, &classObject
+        ptr = &a   (if single object) e.g. &a, &classObject
+    2. An array variable is basically a pointer, hence a pointer and array both supports
+        ptr = arr;
+        ptr[2] == arr[2] && *(ptr+2) == *(arr+2)
     2. If you are allocating a memory bloc to a pointer, then write 
         ptr = new data_type
-            now this data type can be anything, int[3] (1D array), int*[3] (2D, saying all 3 elements are also pointers),
-            or ClassTest(variable), etc.
+            now this data type can be anything,
+                int[3] (1D array),
+                int*[3] (2D, saying all 3 elements are also pointers), or
+                ClassTest(variable), etc.
 
 */
 
