@@ -12,6 +12,7 @@
 7. [Stacks and Queues](#stacks-and-queues)
 8. [Trees (Binary Trees and BST)](trees.md)
 9. [Graphs](graphs.md)
+10. [DP](dynamic_programming/)
 
 <hr>
 
@@ -42,8 +43,7 @@ Operations of iterators :-
     - `int a[n]` is possible
     - `sort(arr, arr+n)` can be used to sort using `<algorithm>` header file
 - Basics of array
-    - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381276)
-    - [Rotate array](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381279)
+    - [Rotate array](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381279) ; [3 different ways](https://betterprogramming.pub/3-ways-to-rotate-an-array-2a45b39f7bec) ; [code in o(n) time and o(1) space](arrays/rotate_array.cpp)
     - [kth largest and smallest element](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118787/offering/1381281?leftPanelTab=0) !!! ; use QuickSelect to solve in O(n)
 - Basics of 2D array
     - How are they stored - row major and column major
@@ -160,7 +160,6 @@ Recursion
 for problems like find **unique** subsets/ combinations to add up to a target.
 use for loop to check every possible decision. and use "n" index to pass instead of trimming the input.
 This is called n-decision approach.
-
 ```
 <br>
 
