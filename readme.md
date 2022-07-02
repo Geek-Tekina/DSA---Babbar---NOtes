@@ -1,5 +1,3 @@
-`find . -type f  ! -name "*.*"  -delete`
-
 # README.MD
 
 0. [Pointers](pointers.cpp)
