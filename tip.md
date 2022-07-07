@@ -8,6 +8,7 @@ Before Interview
     - Heap
     - Lexicographical questions
     - 1e7 + 9 questions
+    - Catalan number
 
 DSA
 - [ ] Arrays and Strings
