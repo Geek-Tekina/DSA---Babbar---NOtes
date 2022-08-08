@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 
-string x = "agf";
-string y = "abcdef";
+string x = "intention";
+string y = "execution";
 
 int solve(int m, int n){
     if(m == 0 || n == 0)    return 0;

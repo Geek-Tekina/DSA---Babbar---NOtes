@@ -31,7 +31,7 @@
     - [Detect cycle in Directed Graph](graphs/5_union-find.md)
     - [Kruskal's Algo](graphs/5_kruskal.cpp) ;  same as above
     - [Prims's Algo](graphs/6_prims.cpp)
-        - parent array : stores "parent i.e. source" at destination value and hence `parent[v] = u, for u-u`. initialises with `parent[0] = -1`
+        - parent array : storing, `p[v]=u`, that is source value @dest, dest's(p[i]) parent will be what? i.
         - weight array : to store the weight of the visited and adjacent nodes, else INT_MAX
         - visited array
 - Shortest Path - [Dijkstra](graphs/7_dijkstra.cpp)
