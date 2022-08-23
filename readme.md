@@ -14,6 +14,16 @@
 
 <hr>
 
+__For interview__
+- [Shell](./shell.md)
+- Regex
+- DBMS/ SQL
+- OS
+- Programming theoretical
+- [Flutter](https://docs.google.com/document/d/1n8t_xwEaW0EtSA8E9NW6Ey3bU2W08_tJYxHuW3952ao/edit?usp=sharing)
+- Node JS
+<hr>
+
 ### STL
 
 The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It is a library of **container** classes, algorithms, and **iterators**. It is a generalized library and so, its components are parameterized.

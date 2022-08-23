@@ -1,3 +1,0 @@
-
-
-### android project structure
