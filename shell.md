@@ -177,3 +177,28 @@ fi
 - [operators](.assets/Unix%20_%20Linux%20-%20Shell%20Basic%20Operators.pdf)
 - [loops](https://www.geeksforgeeks.org/looping-statements-shell-script/)
 - [shell functions](https://www.tutorialspoint.com/unix/unix-shell-functions.htm)
+
+
+
+### FAQs
+1. ___last 2 lines?___ tail -2 filename
+1. ___first line?___ head -1 filename
+1. ___what is awk?___ [gfg.com](https://www.geeksforgeeks.org/awk-command-unixlinux-examples/)
+1. ___what is the shebang line?___ absolute path for the shell interpreter. It should be the first line - which is ready by kernel and then the kernel loads the shell interpreter.
+1. ___`$* vs $@` ?___
+1. ___what is the file system?___
+1. ___lifespan of a shell var?___ till the execution
+1. ___default permissions on a file?___ 666 rw-rw-rw 
+1. ___shell script if else shorthand / ternary command?___ `[ $AGE == 25 ] && result="true" || result="false"`
+1. ___print substring?___ name=Somename && echo ${name:start_i:Len}
+1. ___arrays in shell?___ - [init, index, print](https://www.geeksforgeeks.org/array-basics-shell-scripting-set-1/)
+1.  
+1. ___---Experienced ones---___
+1. ___redirect standard output and input to same location?___
+1. ___difference between ' and " ?___ `''` doesnot evaluate the string e.g. `echo 'name is $name'` gives the exact same output while `""` whill use name variable value
+1. what is crontab - stands for crontable. It is a utility that uses cron 
+1. two files of crontab - cron.allow and cron.deny (decides which users are denied the use of cron)
+1. ___what is a linux cron file?___ describe
+1. ___tar / backup file extension?___ tar (tape archive) creates a backup archive of the File
+1. ___debug shell scripts?___ by printing required information OR using `set -x` below shebang line 
+1. ___while echoing to execute some command, use backticks like this___ echo "current PWD is `pwd`" 

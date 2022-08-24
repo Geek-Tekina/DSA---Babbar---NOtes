@@ -17,9 +17,9 @@
 __For interview__
 - [Shell](./shell.md)
 - Regex
-- DBMS/ SQL
-- OS
-- Programming theoretical
+- [DBMS/ SQL](.assets/cs_fundamentals/dbms_tutorial.pdf)
+- [OS](.assets/cs_fundamentals/os.pdf)
+- [OOPS/ Programming theoretical](.assets/cs_fundamentals/oops.pdf)
 - [Flutter](https://docs.google.com/document/d/1n8t_xwEaW0EtSA8E9NW6Ey3bU2W08_tJYxHuW3952ao/edit?usp=sharing)
 - Node JS
 <hr>

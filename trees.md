@@ -88,11 +88,9 @@
         2. Second approach is to find mid from the LL itself, using fast and slow method.
         3. https://www.geeksforgeeks.org/sorted-linked-list-to-balanced-bst/ ; here we are recursively building the BST from l-r and b-t.
         ```
-        ```
-        1. BST to Balanced BST  - as we know inorder of a BST is nothing but a sorted list. and we can easily convert a sorted list to BBST. so, just find the inorder of BST, and create the tree recursively in in-order manner.
-        2. Merge two BST - here, find the two sorted vectors, merge them using single pass merge sort. and now create BBST from sorted list. WHY I CHOSE QUEUE?? because its allows easily popping from front.
-        3. BST to Min-Heap - get inorder-sorted-vector from BST and copy to BST in pre-order manner to create Min-Heap. 
-        ```
+    - BST to Balanced BST  - as we know inorder of a BST is nothing but a sorted list. and we can easily convert a sorted list to BBST. so, just find the inorder of BST, and create the tree recursively in in-order manner.
+    - Merge two BST - here, find the two sorted vectors, merge them using single pass merge sort. and now create BBST from sorted list. WHY I CHOSE QUEUE?? because its allows easily popping from front.
+    - BST to Min-Heap - get inorder-sorted-vector from BST and copy to BST in pre-order manner to create Min-Heap. 
 - Standard Problems
     - [Fix BST/ Recover BST](trees/19_fix_bst.cpp)
         ```
@@ -104,13 +102,20 @@
         ```
     - [LCA of BST](trees/20_lca_bst.cpp)
         ```
-        In BST, the we can easily track LCA by just checking with the root data, if both the elements are greater then go to right child else if both smaller go to left child else this is the LCA node.
+        - In BST, the we can easily track LCA by just checking with the root data 
+        - if both the elements are greater then go to right
+        - else if both smaller go to left child 
+        - else this is the LCA node.
         ```
     - [Pair Sum in BST](https://www.techiedelight.com/find-pair-with-given-sum-bst/)
         ```
-        We can easily solve this problem by using hashing. The idea is to traverse the tree in an inorder fashion and insert every node’s value into a set. Also check if, for any node, the difference between the given sum and node’s value is found in the set, then the pair with the given sum exists in the tree.
+        We can easily solve this problem by using hashing. 
+        
+        - The idea is to traverse the tree in an inorder fashion and insert every node’s value into a set. 
+        - Also check if, for any node, the difference between the given sum and node’s value is found in the set, then the pair with the given sum exists in the tree.
         ```
     - [k-th largest element](https://www.geeksforgeeks.org/kth-largest-element-in-bst-when-modification-to-bst-is-not-allowed/)
         ```
-        keep in order traversal and maintan a ++counter, such that if counter becomes k, return the value. 
+        - keep in order traversal and maintan a ++counter
+        - such that if counter becomes k, return the value. 
         ```
