@@ -5,12 +5,12 @@
 2. [Array](#arrays-and-strings)
 3. [Linked List](#linked-list)
 4. [Recursion & Backtracking](#recursion--backtracking)
-5. [Greedy Algos](#greedy-algos)
+5. [Greedy Algos](greedy.md)
 6. [Binary Search](#binary-search)
 7. [Stacks and Queues](#stacks-and-queues)
 8. [Trees (Binary Trees and BST)](trees.md)
 9. [Graphs](graphs.md)
-10. [DP](dynamic_programming/)
+10. DP - refer copy
 
 <hr>
 
@@ -180,19 +180,6 @@ Backtracking
 
 <hr>
 
-### Greedy Algos
-- converting arrays to a structure and `comparators` for sorting structure
-- Most commonly asked greedy algos
-    - Activity Selection
-    - Fractional Knapsack
-    - Minimum No. of coins
-    - [Merge Intervals](https://www.geeksforgeeks.org/merging-intervals/)
-    - [Min Platforms](https://www.youtube.com/watch?v=dxVcMDI7vyI&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=47)
-    - >Job sequencing !!!
-
-
-<hr>
-
 ### Binary Search
 - Instead of `mid = start+end/2` use `mid = start + (end-start)/2`, to remove integer overflow
 - In cases you dont know the high limit or the array is **infinite**, use Binary Search in reverse manner that is keep increasing the `high to 2*high and start to high` until condition is met.
@@ -231,6 +218,7 @@ Backtracking
     - [Previous Small/ Nearest supporter](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380952) ; (++i, desc)
     - Next Small Element ; (--i, dsc)
     - Index based prev/next greater/smaller questions e.g. [Stock Span](https://leetcode.com/problems/online-stock-span/), [Area of rect](https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/)
+    - Maximum Area of Histogram
 - Hard Level
     - [LRU Cache Implementation](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380941) ; [Concept](https://www.youtube.com/watch?v=xDEuM5qa0zg&t=774s) + [code](https://www.youtube.com/watch?v=Xc4sICC8m4M&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&t=0s)
     - [Execution Time](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118523/offering/1380951) !!!!
