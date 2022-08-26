@@ -39,7 +39,9 @@
     - the code is same as prim's only the relaxation is updated
     - for prims it was `weight[v] > graph[u][v]`, where we are checking Node_V->B is better or previousNode->B
     - for dijsktra it is, `weight[u] != INT_MAX && weight[v] > weight[u] + graph[u][v]`, where first we are checking the current node is not infinity and then relax it.
+- Floyd's Warshall - relaxation logic is `dij = min(dij, dik + dkj), for k=1ton, i=0ton and j=0ton`
 - [Kahn's Algo or Topological Sorting](graphs/8_topological.cpp)
+- Kosaraju Algorithm
 - [Rotten Oranges](graphs/9_rotten_oranges.cpp) ; similar logic for [Shortest Path in Binary Matrix](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381547?leftPanelTab=3)
     ```cpp
     /*

@@ -133,6 +133,8 @@ Operations of iterators :-
     - Extra Space Method : use unordered_set to store the addresses of the nodes and in case of aray use maps. 
     - Optimisedd Method : Use `Floyd'd tortoise and hare algorithm` to detect cycle. It is kind of Two pointer approach, as one pointer is moving 1 at a time and another is moving 2 at a time.
 - same algo can be applied to `find middle node in LL in O(n)`
+- [Reverse a Linked List in groups of given size](linked_list/reverse_grp.cpp)
+- Clone a ll with next and random pointer
 
 <hr>
 
