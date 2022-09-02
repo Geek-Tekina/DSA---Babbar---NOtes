@@ -17,6 +17,9 @@ for i = 1 to n
 1. Minimum No. of coins -
     ```cpp
     i = coins.size() - 1;
+    // we know the biggest coin is the last one so that that as many as possible
+    res = v / coins[i]    
+    v %= coins[i]    
     while(v!=0)
         if(v >= coins[i])    ++res, v -= coins[v];
         else    --i;
@@ -27,11 +30,8 @@ for i = 1 to n
     1. __Min platforms required to board all the trains__ - [code](greedy/min_platforms.cpp)
 1. __Job sequencing__ [(striver)](https://takeuforward.org/data-structure/job-sequencing-problem/) - [code](greedy/job_sq.cpp)
 
-### Questions & Playlist to do
-1. Gas Station [(youtube)](https://www.youtube.com/watch?v=xmJZSYSvgfE&ab_channel=KnowledgeCenter) - [leetcode](https://leetcode.com/problems/gas-station/)
-1. [Greedy Algorithm Faraz](https://www.youtube.com/watch?v=lZJGbS12mWo&list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf&index=6&ab_channel=CodeChef)
-1. [Keerti purswani Mock Interview with Riddhi Dutta](https://www.youtube.com/watch?v=r2w_r4U67Nc&ab_channel=RiddhiDutta)  -->
-
 ### 450 Sheet - Greedy based questions
-<!-- - [Merge Intervals](https://www.geeksforgeeks.org/merging-intervals/) -->
+1. 245 Min and Max cost to buy all candies - to find min cost, logically we want to buy all cheaper candies and eliminate the `k` expensive ones, which can be done by sorting and using two pointer approach. Do similar for max cost. 
+1. 323 Gas Station [(youtube)](https://www.youtube.com/watch?v=7WYwqvOSaa8&ab_channel=CodeLibrary-byYogesh%26Shailesh) - [code](greedy/gas_stn.cpp)
+
 

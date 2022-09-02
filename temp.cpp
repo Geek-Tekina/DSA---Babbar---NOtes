@@ -1,23 +1,22 @@
 #include <iostream>
-#include <vector>
-#include <string>
 using namespace std;
 
-bool isPalin(char *string, int start, int end) {
-    if (start >= end) return true;
-    if (string[start] != string[end]) return false;
-    return isPalin(string, start+1, end-1);
-}
-
-int countPalindrome(char *input1, int input2) {
-    int count = 0;
-    for (int i = 0; i < s.size(); i++) {
-        //!
-    } 
-    return count;
-}
-
 int main(){
-    char *s = "level";
-    cout << isPalin(s, 0, 4) ;
+    int n=3,set=2;
+
+    int high=0, sum=0;
+    while(n--)  high = high*10 + 1;
+    int highd = 0;
+    int base = 1;
+    while (high) {
+        int lastDigit = high % 10;
+        high /= 10;
+        highd += lastDigit*base;
+        base = base*2;
+    }
+    ++highd;
+    while(highd--)
+        if(__builtin_popcount(highd) == set)    
+            sum+=highd;
+    cout << sum;
 }
