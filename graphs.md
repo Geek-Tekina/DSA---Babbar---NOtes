@@ -55,3 +55,7 @@
                 //
             }
     ```
+
+### Misc
+- Rat in a maze vs [Min Steps to reach target](graphs/11_min_steps_reach_target.cpp)
+- [Min steps by knight](graphs/10_steps_knights.cpp) - it is not possoble with dfs but why??

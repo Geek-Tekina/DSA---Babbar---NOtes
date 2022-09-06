@@ -14,33 +14,15 @@ void solve(int i, int j, bool **visited, string op){
         cout << op << endl;
         return;
     }
+    if(i>=0 and i<n and j>=0 and j<n and visited[i][j]==false and m[i][j]) { 
+        visited[i][j] = true;
 
-    // RIGHT
-    if (j<n-1  && m[i][j+1] && !visited[i][j+1]){
-        visited[i][j+1] = true;
-        solve(i, j+1, visited, op + 'R');
-        visited[i][j+1] = false;
-    }
-
-    // DOWN
-    if (i<n-1 && m[i+1][j] && !visited[i+1][j]){
-        visited[i+1][j] = true;
+        solve(i, j+1, visited, op + 'R');        
         solve(i+1, j, visited, op + 'D');
-        visited[i+1][j] = false;
-    }
-
-    // LEFT
-    if (j>0 && m[i][j-1] && !visited[i][j-1]){
-        visited[i][j-1] = true;
-        solve(i, j-1, visited, op + 'L');
-        visited[i][j-1] = false;
-    }
-
-    // UP
-    if (i>0 && m[i-1][j]  && !visited[i-1][j]){
-        visited[i-1][j] = true;
+        solve(i, j-1, visited, op + 'L');        
         solve(i-1, j, visited, op + 'U');
-        visited[i-1][j] = false;
+        
+        visited[i][j] = false;
     }
 }
 
@@ -52,7 +34,6 @@ int main(){
         for(int j=0 ;  j<n ; ++j)
             visited[i][j] = false;
     }
-    // cout << visited[1][2];
     solve(0, 0, visited, "");
     return 0;
 }
