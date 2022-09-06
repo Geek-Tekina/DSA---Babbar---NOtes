@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-there are two init ways for initialising graphs
+there are two ways for initialising graphs
 with number of nodes given @compile time and @run time
 
 1. for compile time, an array of vectors can bse used    i.e vector...[]

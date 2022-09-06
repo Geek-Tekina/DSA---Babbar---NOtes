@@ -1,7 +1,7 @@
 - Detect cycle in un-directed graph?
     ```cpp
         bool isCycle(){
-            // apply dfs and if some node is already visited then cycle
+            // apply dfs and if some node is already visited then cycle except parent
         }
     ```
 - Detect cycle in directed graph, by same method?
