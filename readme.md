@@ -2,7 +2,7 @@
 
 0. [Pointers](pointers.cpp)
 1. [STL](#stl)
-2. [Array](#arrays-and-strings)
+2. [Array & Strings](#arrays-and-strings)
 3. [Linked List](#linked-list)
 4. [Recursion & Backtracking](#recursion--backtracking)
 5. [Greedy Algos](greedy.md)
@@ -57,11 +57,12 @@ Operations of iterators :-
     - How are they stored - row major and column major
     - Wave traversal (using one nested and one insert operation to avoid TLE)
     - Spiral traversal 
-- Basics of strings
+- stringsBasics of 
     - How strings are stored? (check just below)
     - Practice problems from [coding ninja](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381763)
     - [Check permutation](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381766) ; use hashmap for O(n)
     - For questions with split on the basis of a delimiter concept,
+    - 450 sheet questions
     ```cpp
         for(int i=0 ; i<input.size() ; ++i){
             word += input[i];

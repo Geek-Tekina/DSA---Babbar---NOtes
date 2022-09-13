@@ -21,6 +21,8 @@ void solve(int i, int j, bool **visited, string op){
         solve(i+1, j, visited, op + 'D');
         solve(i, j-1, visited, op + 'L');        
         solve(i-1, j, visited, op + 'U');
+        // instead of creating a new visited 2d matrix for each call, 
+        // we can just mark the current cell as visited and then backtrack
         
         visited[i][j] = false;
     }
