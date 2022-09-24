@@ -1,51 +1,99 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef vector<string> vs;
-typedef vector<vs> vvs;
-
-bool isPalindrome(int i, int j, string &s){
-    while(i < j){
-        if(s[i] != s[j]) return false;
-        i++; j--;
-    }
-    return true;
+#include<stdio.h>
+#include<stdlib.h>
+ 
+struct TNode
+{
+ char data;
+ struct TNode* left;
+ struct TNode* right;
+};
+ 
+struct TNode* newNode(char data);
+ 
+struct TNode* arrayToTree(char arr[], int start, int end)
+{
+ if (start > end)
+  return NULL;
+ int mid = (start + end)/2;
+ 
+struct TNode *root = newNode(arr[mid]);
+ 
+root->left = arrayToTree(arr, start, mid-1);
+ 
+root->right - arrayToTree(arr, mid+1, end);
+ 
+return root;
 }
-
-void solve(int i, int j, string &s, vs &temp){
-    if(i==j)    
-        temp.push_back(s.substr(i, i));
-    else if(isPalindrome(i, j, s))
-        temp.push_back(s.substr(i, j));          
-    else {
-        for(int k=i ; k<j ; ++k){
-            solve(i, k, s, temp);
-            solve(k+1, j, s, temp);
-        }
-    }
+ 
+struct TNode* newNode(char data)
+{
+struct TNode* node = (struct TNode*)malloc(sizeof(struct TNode));
+ 
+node->data = data;
+ 
+node->left = NULL;
+ 
+node->right = NULL;
+ 
+return node;
+ 
 }
-
-vvs partition(string s){
-    vvs res;
-    int i=0, j=s.size()-1 ;
-    vs temp;
-    for(int k=0 ; k<j ; ++k){
-        temp = {};
-        solve(i, k, s, temp);
-        solve(k+1, j, s, temp);
-        res.push_back(temp);
-    }
-    return res;
+ 
+void preOrder(struct TNode* node)
+{
+ 
+if (node == NULL)
+ return;
+printf("%c", node->data);
+preOrder(node->left);
+preOrder(node->right);
 }
-
-int main(){
-    vvs res = partition("aab");
-    // print res
-    for(auto list: res){
-        cout << "[";
-        for(auto s: list){
-            cout << s << ",";
-        }
-        cout << "]" << endl;
-    }
-    return 0;
+void reverseArray(char *arr, int start, int end) {
+ while(start<end) {
+  char x = arr[start];
+  arr[start++] = arr[end];
+  arr[end--] = x;
+  }
+} 
+ 
+void updateArray(char *arr, int n) {
+ int size;
+ for (size=0; arr[size]!='\0'; ++size);
+  reverseArray( arr, 0, size - 1 );
+ reverseArray( arr, 0, n-1);
+ reverseArray( arr, n, size - 1 );
+ 
+}
+ 
+int main()
+{
+// char arr[] = "fhfrj*votbn";
+char arr[] = "cjarqr*ypdxq";
+int n;
+for(n=0; arr[n]!='\0'; ++n);
+struct TNode *root = arrayToTree(arr, 0, n-1);
+preOrder(root);
+ printf("-");
+ 
+updateArray(arr, 4);
+ 
+root = arrayToTree(arr, 0, n-2);
+ 
+preOrder(root);
+ 
+printf("-");
+ 
+updateArray(arr, 2);
+ 
+root = arrayToTree(arr, 0, n-1);
+ preOrder (root);
+ 
+printf("-");
+ 
+updateArray(arr, 1);
+ 
+ root = arrayToTree(arr, 0, n-3);
+ 
+preOrder(root);
+return 0;
 }

@@ -1,5 +1,4 @@
-- **for Reff** : https://dynalist.io/d/8JunO-H3ZxPg9wDul58ouDMS
-## Binary Trees
+### Introduction of Trees
 - creating constructor is important in order to assign NULL values and memory block to child pointers and the pointer itself.
     ```cpp
     class node {
@@ -16,6 +15,9 @@
     };
     ```
 - **vector to Binary Tree or Input** : Its better to return a `node*` while creating the Binary Tree and finally get the root element like this `node* headPtr = input()`. checkout full code [@input_recursion.cpp](trees/1_input_rec.cpp) or [@input_level.cpp](trees/2_input_level.cpp)
+
+
+### Standard Problems of Binary Tree 
 - **Ordered Traversal of Binary Tree**
     ```md
     in traversal L-R is fixed always, only the position of Middle is detrmined.
@@ -50,72 +52,60 @@
     - optimised solution will be to have a different variable answer, and everytime we find the height of a subtree just check if ans is bigger or `1+lh+rh`, and then just return its height ie `max(lh,rh)` answer here at [trees/diameter](trees/7_diameter.cpp)
     - [youtube explanation](https://www.youtube.com/watch?v=Toe0UQMWhjM)
     - [geeksforgeeks.com](https://www.geeksforgeeks.org/diameter-of-a-binary-tree/)
-- Misc Questions
-    - [Mirrored Tree](trees/11_mirrored.cpp)
-    - [Replace node with depth](trees/8_replacenode_with_depth.cpp)
-    - [Binary tree from preorder and inorder](trees/12_preorder_inorder.cpp)
-    - [Binary tree from parent array](trees/13_from_parent_array.cpp)
-    - !! LCA of Binary Tree
-    - !! Time To Burn Tree
 
-<hr>
 
-## BST
-- **BST to sorted list? do inroder** [examnple : BT to BST](trees/16_bt_to_bst.cpp)
-- **sorted list to BST (if BT given)? any traversal and copy** [examnple : BT to BST](trees/16_bt_to_bst.cpp)
-- **sorted list to BST (if BT not given)? construct the BST recursively from left-right and bottom-top aka Pre-Order** [example : Sorted LL to Balanced BST](trees/17_ll_to_bst.cpp)
-- Construction of BST
-    - Hard, [from preorder](https://www.techiedelight.com/build-binary-search-tree-from-preorder-sequence)
-    - [from levelorder](trees/15_bst_from_level.cpp)
-    - Count unique BST for n
-        ```md
-            - lets assume x is root, with l as #leftChild and r as #right.
-            - then total# combinations will be Combinations c(l) * c(r)
-            - now e.g. 4 is given (1,2,3,4) there will be 4 root nodes cases (root-> left, rght)
-                - 1 -> null,234 ; c(0)*c(3)
-                - 2 -> 1,34 ; c(1)*c(2)
-                - 3 -> 12,4 ; c(2)*c(1)
-                - .... and summing up this is basically CATALAN Number.
-            - approach : https://www.youtube.com/watch?v=OIc0mHgHUww
-            - catalan code : https://www.youtube.com/watch?v=CMaZ69P1bAc&t=0s
-        ```
-- Conversion Based Problems
-    - [BT to BST](trees/16_bt_to_bst.cpp) : Here the inorder is generated from Binary Tree and then it is sorted because now if we will treat this sorted array as inorder, it will help us to copy the values to the given binary search tree. The complexity will be o(nlogn) bec of sorting algorithm. Remember, inorder sorted list is not giving us the Binary Tree here, we are just using the values to modify given Binary Tree and since the list is sorted and we are using inorder (left-mid-right), it will convert the tree to bst.
-    - Sorted LL to Balanced BST ; [do check out the code](trees/17_ll_to_bst.cpp) ; [code for merge two bst](trees/18_merge_bsts.cpp)
-        ```
-        There are three approaches for this
-        1. create vector from LL and then recursively find mid and node->left = createBst(start, mid-1) and for right too
-        2. Second approach is to find mid from the LL itself, using fast and slow method.
-        3. https://www.geeksforgeeks.org/sorted-linked-list-to-balanced-bst/ ; here we are recursively building the BST from l-r and b-t.
-        ```
-    - BST to Balanced BST  - as we know inorder of a BST is nothing but a sorted list. and we can easily convert a sorted list to BBST. so, just find the inorder of BST, and create the tree recursively in in-order manner.
-    - Merge two BST - here, find the two sorted vectors, merge them using single pass merge sort. and now create BBST from sorted list. WHY I CHOSE QUEUE?? because its allows easily popping from front.
-    - BST to Min-Heap - get inorder-sorted-vector from BST and copy to BST in pre-order manner to create Min-Heap. 
-- Standard Problems
-    - [Fix BST/ Recover BST](trees/19_fix_bst.cpp)
-        ```
-        in this question, two values are swapped and rest everything is fine.
-        approach - there can be two cases, that either the anamoly nodes are adjacent and either they are far away. 
-        what we can do is maintain prev node and while traversing inorder, if prev->data is smaller than root->data, then we know its an anamoly and if this is first anamoly ie if(first == NULL).. then point first to prev and second to root.
-        but if !first, then just second = root
-        and at last just swap their data
-        ```
-    - [LCA of BST](trees/20_lca_bst.cpp)
-        ```
-        - In BST, the we can easily track LCA by just checking with the root data 
-        - if both the elements are greater then go to right
-        - else if both smaller go to left child 
-        - else this is the LCA node.
-        ```
-    - [Pair Sum in BST](https://www.techiedelight.com/find-pair-with-given-sum-bst/)
-        ```
-        We can easily solve this problem by using hashing. 
-        
-        - The idea is to traverse the tree in an inorder fashion and insert every node’s value into a set. 
-        - Also check if, for any node, the difference between the given sum and node’s value is found in the set, then the pair with the given sum exists in the tree.
-        ```
-    - [k-th largest element](https://www.geeksforgeeks.org/kth-largest-element-in-bst-when-modification-to-bst-is-not-allowed/)
-        ```
-        - keep in order traversal and maintan a ++counter
-        - such that if counter becomes k, return the value. 
-        ```
+## Standard Problems for BST 
+- **Preorder to BST** - using range of values
+- **LevelOrder to BST** - use queue and push nodes [read here](trees/15_bst_from_level.cpp)
+- **[Preorder and Inorder to BST](trees/12_preorder_inorder.cpp)** - use map to find the index
+- **Binary Tree to BST** - inorder traversal, sort list and copy
+- **sorted list to BST** - use createTree(ptr, idx/2) for left and createTree(ptr, n-idx/2-1) for right [read here](trees/17_ll_to_bst.cpp)
+- **Count unique BST for n nodes** - catalan number 
+- **Merge two BST** - find the two sorted vectors, merge them using single pass merge sort. Then, __sorted list to BST__
+
+
+### Misc Problems BT
+- [Mirrored Tree](trees/11_mirrored.cpp)
+- [Replace node with depth](trees/8_replacenode_with_depth.cpp)
+- [Pair Sum](https://www.techiedelight.com/find-pair-with-given-sum-bst/) : use hashmap for o(n) time complexity
+- [Binary tree from parent array](trees/13_from_parent_array.cpp)
+- LCA of Binary Tree - there are four cases just remember them
+    - if (root is null) return null
+    - if (root is p or root is q) return root
+    - for left and right (recursively called answer), if left null then right, if right null then left
+    - hence automatically, if both left and right are not null then return root (this means we found one-one element in both the subtrees and hence this nodee is LCA, now further lca node will be either in just right or left, thus it will be the answer only)
+- **Time To Burn Tree**
+- **Subtree of another Tree** - for each node, check if the subtree is same or not
+- **Max Element in the Path** 
+    - find LCA, then find max in left and right subtree ( from lca node to the p/q) [read here](https://www.geeksforgeeks.org/maximum-element-two-nodes-bst/)
+    - preorder and then find indices of p and q, then find max in the range of indices MIGHT work but extra space is required
+- **Distance between two nodes**
+- **Leaves on level apart** - find maxLevel and minLevel and then check if there difference is 1 or not
+
+
+### Misc Questions BST
+- **Partial BST** - inorder and then `return is_sorted(inorder.begin(), inorder.end())`
+- **[BST to Greater Sum Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)** - the logic is to go to the right-most child first and then add "sum" (initialside with 0) to its node->val and also update sum with the same
+    ```cpp
+    // - for any node, go to right child
+    // - then sum += node->val and node->val = sum
+    // - now just go to left child 
+    int sum=0;
+    TreeNode* convertBST(TreeNode* node) {
+        if(node == NULL)    return 0;
+        convertBST(node->right);
+        sum += node->val;
+        node->val = sum;
+        convertBST(node->left);
+        return node;
+    }
+    ```
+- [Fix BST/ Recover BST](trees/19_fix_bst.cpp)
+    ```
+    in this question, two values are swapped and rest everything is fine.
+    approach - there can be two cases, that either the anamoly nodes are adjacent and either they are far away. 
+    what we can do is maintain prev node and while traversing inorder, if prev->data is smaller than root->data, then we know its an anamoly and if this is first anamoly ie if(first == NULL).. then point first to prev and second to root.
+    but if !first, then just second = root
+    and at last just swap their data
+    ```
+- [k-th largest element](https://www.geeksforgeeks.org/kth-largest-element-in-bst-when-modification-to-bst-is-not-allowed/) - keep in order traversal and maintan a ++counter, when counter == k, then return the node->data
