@@ -1,16 +1,16 @@
 # README.MD
 
-0. [Pointers](pointers.cpp)
-1. [STL](#stl)
-2. [Array & Strings](#arrays-and-strings)
-3. [Linked List](#linked-list)
-4. [Recursion & Backtracking](#recursion--backtracking)
-5. [Greedy Algos](greedy.md)
-6. [Binary Search](#binary-search)
-7. [Stacks and Queues](#stacks-and-queues)
-8. [Trees (Binary Trees and BST)](trees.md)
-9. [Graphs](graphs.md)
-10. DP - refer copy
+- [ ] [Pointers](pointers.cpp)
+- [ ] [STL](#stl)
+- [ ] [Array & Strings](#arrays-and-strings)
+- [ ] [Linked List](#linked-list)
+- [ ] [Recursion & Backtracking](#recursion--backtracking)
+- [ ] [Greedy Algos](greedy.md)
+- [ ] [Binary Search](#binary-search)
+- [ ] [Stacks and Queues](#stacks-and-queues)
+- [ ] [Trees (Binary Trees and BST)](trees.md)
+- [ ] [Graphs](graphs.md)
+- [ ] DP - refer copy
 
 <hr>
 
