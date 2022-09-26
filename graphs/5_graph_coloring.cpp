@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #define NODE 6
 using namespace std;
 
@@ -12,7 +12,12 @@ go to any node, u = 1 to NODE
         beacause rest other are already false. 
 */
 
-int graphColoring(){
+/*
+1. res array : for ith node, res[i] will be the used color
+2. colorused bool array : for ith color, colorused[i] will be true if used
+*/
+
+vector<int> graphColoring(){
     vector<int> res(NODE, -1);
     vector<bool> colorUsed(NODE, false);
     
@@ -25,13 +30,11 @@ int graphColoring(){
             if(res[it] != -1)
                 colorUsed[res[it]] = true;
         
-        int colorNotUsed;
-        for(int u=0; u<NODE ; ++u)
-            if(!colorUsed[u]){
-                colorNotUsed = u;
-                break;
-            }
-        
+        int colorNotUsed=0;
+        while( colorNotUsed < NODE)
+            if(!colorUsed[colorNotUsed])    break;
+            else    ++colorNotUsed;
+
         // set this color as current's node answer
         res[i] = colorNotUsed;
         
@@ -41,8 +44,11 @@ int graphColoring(){
             if(res[it] != -1)
                 colorUsed[res[it]] = false;
     }
+    return res;
 }
 
-main(){
-    graphColoring();
+int main(){
+    for(auto it: graphColoring())
+        cout << it << " ";
+    return 0;
 }

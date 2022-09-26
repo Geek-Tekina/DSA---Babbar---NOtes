@@ -1,12 +1,34 @@
 - Detect cycle in un-directed graph?
     ```cpp
-        bool isCycle(){
-            // apply dfs and if some node is already visited then cycle except parent
+    // apply dfs and if some node is already visited then cycle except parent
+    bool isCyclic(int i, int parent){
+        vis[i] = true;
+        for(auto it: list[i]){
+            if(!vis[it]){
+                if( isCyclic(it, i) )
+                    return true;
+            } else if(it != parent)
+                return true;
         }
+        return false;
+    }
+    bool isTree(){
+        if(isCyclic(0, -1))
+            return false;       // we have a cycle, so not tree
+        
+        for(int i=0 ; i<n ; ++i)
+            if(!vis[i])
+                return false;
+        
+        return true;
+    }
     ```
 - Detect cycle in directed graph, by same method?
     - we cant do same, because there might be a node that has outgoing edge but no incoming edge, and hence it will remain un-visited.
-- Union-Find approach
+- Detect cycle in directed graph? Union-Find approach
+    >NOTE - our parent is dest node, and we are checking if for an edge s and d have same parents (that is if they end up at the destination or not)
+
+    > parent[dest] and source[dest] - this means, in findParent() `parent[dest] ko recursively find krna hai` whereas `source[dest] means parent[source] = dest` rkhna hai 
     ```cpp
     /* we use the concept of disjoint set approach, 
     where we basically treat every node as individual set initially */
@@ -23,5 +45,6 @@
         if(parent[item] == -1)  return item;
         findParent(parent[item]);
     }
+    
+    // and hence this is how we use UNION-FIND to detect cycle and find MST (later on) for a graph
     ```
-    - and hence this is how we use UNION-FIND to detect cycle and find MST for a graph

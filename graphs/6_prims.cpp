@@ -4,6 +4,11 @@
 using namespace std;
 #define V 5
 
+
+// - parent array : storing, `p[v]=u`, that is source value @dest, dest's(p[i]) parent will be what? i.
+// - weight array : to store the weight of the visited and adjacent nodes, else INT_MAX
+// - visited array
+
 int weight[N];
 bool visited[N];
 int graph[N][N] = {{0, 2, 0, 6, 0},
@@ -37,7 +42,7 @@ void shortestPath(){
     for(int i=0 ; i<N-1 ; ++i){
         // tells us about the next adjacent node which has minimum weight and not visited.
         // initially it will give us 0 index bec its not visited and hence we
-        // will get to see its adjacent nodeds
+        // will get to see its adjacent nodes
         int u = findNextConnectedNode();
         visited[u] = true;
 
