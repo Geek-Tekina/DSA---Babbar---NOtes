@@ -3,7 +3,7 @@
 - [ ] [Pointers](pointers.cpp)
 - [ ] [STL](#stl)
 - [ ] [Array & Strings](#arrays-and-strings)
-- [ ] [Linked List](#linked-list)
+- [ ] [Linked List](linkedlist.md)
 - [ ] [Recursion & Backtracking](#recursion--backtracking)
 - [ ] [Greedy Algos](greedy.md)
 - [ ] [Binary Search](#binary-search)
@@ -123,21 +123,6 @@ Operations of iterators :-
 
 <hr>
 
-
-### Linked List
-
-- [Strivers Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
-- when creating a new node always write `node* temp = new node();` and do create a constructor.
-- `delete ptr` can be used to delete a pointer block.
-- detecting a loop in lined list or duplicate in array ?
-    - Modification Method : traverse each linked list and point them to null, if you come again on a node which is already pointing to null, then that is where loop begins, in case array turn the positive integers in negative and if you come accross a negative integer then it is duplicated.\
-    - Extra Space Method : use unordered_set to store the addresses of the nodes and in case of aray use maps. 
-    - Optimisedd Method : Use `Floyd'd tortoise and hare algorithm` to detect cycle. It is kind of Two pointer approach, as one pointer is moving 1 at a time and another is moving 2 at a time.
-- same algo can be applied to `find middle node in LL in O(n)`
-- [Reverse a Linked List in groups of given size](linked_list/reverse_grp.cpp)
-- Clone a ll with next and random pointer
-
-<hr>
 
 ### Recursion & Backtracking
 
