@@ -12,18 +12,27 @@ class ListNode {
 };
 
 ListNode* solve(ListNode* head, int k){
-    ListNode* curr = head;
-    ListNode* prev = NULL;
-    ListNode* groupHead;
-    int counter = 0;
-    while(curr){
-        counter = 0;
-        groupHead = curr;
-        while(curr && counter < k){
-            groupHead->next = curr->next->next;
-        }
+    ListNode* curr=head;
+    ListNode* prev=NULL,*nxt=NULL;
+    ListNode* temp=head;
+
+    int c=k;
+    while(temp!=NULL && c>0){
+        temp=temp->next;    c--;
     }
-    return NULL;
+    if(c>0) return head;
+    else    c=k;
+
+    while(curr!=NULL && c>0) {
+        nxt=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=nxt;
+        c--;
+    }
+
+    if(nxt!=NULL)   head->next=reverseKGroup(nxt,k);
+    return  prev;
 }
 
 int main(){
