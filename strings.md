@@ -16,7 +16,7 @@
     // from babbar video
     ```
 
-### Easy level Problems
+### Easy-Medium level Problems
 - __Count Words__ - concept of ' ' as delimeter
 - __Reverse String word wise__ - concept of ' ' as delimeter
 - __Reverse String character wise__
@@ -24,18 +24,27 @@
 - [__Check permutation__](https://www.codingninjas.com/codestudio/guided-paths/basics-of-c/content/118818/offering/1381766) - use hashmap for O(n)
 - [__Is str1 subequence of str2?__](arrays_cn/is_subsq.cpp) - either map or two pointers 
 - [__Anagram Difference__](arrays_cn/anagram_diff.cpp)
+- [__Remove Outermost Paranthesis__](https://leetcode.com/problems/remove-outermost-parentheses/) / [__Max. Nesting Depth Paranthesis__](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) - concept of brackets into stack
+- Sort characters by frequency - use hashmap and then convert to vector of pair and sort in descending order
 
 
-### Medium Level Problems
+### Medium-Hard Level Problems
+- [__Count and Say__](https://leetcode.com/problems/count-and-say/) 
+    - recursive with dp or iterative
+    - find the len of consecutive duplicates and then append to the string 
 - [__Valid String__](https://leetcode.com/problems/valid-parenthesis-string/submissions/)
     - create `stack<int> open, star` two stacks and store the indices, 
     - now as the `)` pop all the required from open, but if empty star.pop()
     - use the next loop to check if `(` is left or not 
     - in first loop, we are treating star as `(` and in second loop we are treating star as `)`
     - [read code here](https://leetcode.com/submissions/detail/672689384/)
-- Sort characters by frequency
+- __Count number of substrings with exactly k distinct characters__
+- __Shortest substring with all characters__
+- Count Palindromic subsequence 
+- [__Transform one string to another__](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/) !!!!
 
-<!-- ### Hard Level Problems
-- Shortest substring with all characters !!!!
-- Hard, [Transform one string to another](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/) !!!!
--->
+
+### DP on Strings
+- Longest Common Substring
+- [__Longest Common Subsequence__](https://leetcode.com/problems/longest-common-subsequence/)
+- Read more here - https://leetcode.com/discuss/general-discussion/651719/how-to-solve-dp-string-template-and-4-steps-to-be-followed
