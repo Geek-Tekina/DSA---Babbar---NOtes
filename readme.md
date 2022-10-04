@@ -6,7 +6,7 @@
 - [x] [Trees (Binary Trees and BST)](trees.md)
 - [x] [Graphs / Backtracking-Tips](graphs.md)
 - [x] [Linked List](linkedlist.md)
-- [ ] [Strings](strings.md)
+- [x] [Strings](strings.md)
 - [x] [Binary Search](binary_search.md)
 - [ ] [Array](arrays.md)
 - [x] [Stacks and Queues](stacks_queues.md)

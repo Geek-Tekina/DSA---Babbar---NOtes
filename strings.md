@@ -38,13 +38,27 @@
     - use the next loop to check if `(` is left or not 
     - in first loop, we are treating star as `(` and in second loop we are treating star as `)`
     - [read code here](https://leetcode.com/submissions/detail/672689384/)
-- __Count number of substrings with exactly k distinct characters__
-- __Shortest substring with all characters__
-- Count Palindromic subsequence 
-- [__Transform one string to another__](https://www.geeksforgeeks.org/transform-one-string-to-another-using-minimum-number-of-given-operation/) !!!!
+- [__Count number of substrings with exactly k distinct characters](https://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/)__ - think of an n*n approach, where each char is treated as starting point and then from that point we find the possible substrings with k distinct chars 
+- __Shortest substring with all characters__ 
+    - use map and two pointer concept
+    - if a character is not present in map, then add it and move j
+    - else if present, then use the map to find the index, and move the i to that index+1, while also removing the characters from map
+    - Time Complexity ??
 
 
 ### DP on Strings
-- Longest Common Substring
-- [__Longest Common Subsequence__](https://leetcode.com/problems/longest-common-subsequence/)
+- __Longest Common Subsequence__
+    - In LCS, if i and j values are equal then, 1+lcs(i-1, j-1)
+    - else to consider all the cases, take out max(lcs(i-1, j), lcs(i, j-1))
+    - Time Complexity - O(mn)
+    - __Print LCS__ - from `dp[m][n] to dp[0][0]`, if `str1[m] == str2[n] ? res.insert(str1[m], 0) : either top or left`
+- __Longest Common Substring__
+    - In LC-Substring, if i and j values are equal then ofc 1+lcs(i-1, j-1) but then also check if its the max value then store in answer `res = max(res, dp[i][j])`
+    - else if not equal then `dp[i][j] as 0`
+- [Code is here](dp_av/6_lcs.cpp)
+- __[Shortest common supersequence](dp_av/7_sc_superseq.cpp)__
+    - generate lcs dp-table, then using the print lcs method, also print the chars while going up/left 
+- __Longest Palindromic Subseq.__ - lcs of str and reverse(str)
+- __Min. deletion and insertion to convert a to b__ - [code](dp_av/8_min_ins_del.cpp)
+- __Subsequence pattern matching__ - check if `lcs(pattern, str) == pattern.size()`
 - Read more here - https://leetcode.com/discuss/general-discussion/651719/how-to-solve-dp-string-template-and-4-steps-to-be-followed
