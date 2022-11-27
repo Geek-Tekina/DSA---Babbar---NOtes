@@ -5,6 +5,7 @@
 - [x] Recursion - refer copy
 - [x] [Trees (Binary Trees and BST)](trees.md)
 - [x] [Graphs / Backtracking-Tips](graphs.md)
+- [ ] [Heap](heap.md)
 - [x] [Linked List](linkedlist.md)
 - [x] [Strings](strings.md)
 - [x] [Binary Search](binary_search.md)

@@ -1,33 +1,58 @@
+#include <bits/stdc++.h>
+#include <vector>
 #include <queue>
 using namespace std;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
 
-int orangesRotting(vector<vector<int>> &grid){
-    queue<pair<int, int>> q;
-    int total = 0, count = 0, result = 0;
-    for (int i = 0; i < grid.size(); ++i){
-        for (int j = 0; j < grid[i].size(); ++j){
-            if (grid[i][j] != 0) ++total;
-            if (grid[i][j] == 2)    q.push({i, j});
+int orangesRotten(vvi &grid){
+    int rows = grid.size();
+    int cols = grid[0].size();
+    int goodOranges = 0;
+    queue<pair<int, int>> rottenOranges;
+    for(int i=0 ; i<rows ; ++i){
+        for(int j=0 ; j<cols ; ++j){
+            if(grid[i][j] == 1) ++goodOranges; 
+            else if(grid[i][j] == 2)    rottenOranges.push({i, j});
         }
     }
 
-    int dx[4] = {0, 1, 0,-1};
-    int dy[4] = {-1,0, 1, 0};
-
-    while(!q.empty()){
-        int size = q.size();
-        count += size;
-        while(size--){
-            int x = q.front().first, y = q.front().second;
-            for(int i=0 ; i<4 ; ++i){
-                int nx = x+dx[i], ny = y+dy[i];
-                if(nx < 0 || ny < 0 || nx >= grid.size() || ny >= grid[0].size() || grid[nx][ny] !=1 )
-                    continue;
-                grid[nx][ny] = 2;
-                q.push({nx, ny});
+    int time = 0;
+    if(goodOranges == 0)    return 0;
+    while(!rottenOranges.empty()){
+        int thisRound = rottenOranges.size();
+        while(thisRound--){
+            pair<int, int> curr = rottenOranges.front();
+            rottenOranges.pop();
+            int i = curr.first;
+            int j = curr.second;
+            if(i-1 >= 0 && grid[i-1][j] == 1){
+                grid[i-1][j] = 2;
+                rottenOranges.push({i-1, j});
+                --goodOranges;
+            }
+            if(i+1 < rows && grid[i+1][j] == 1){
+                grid[i+1][j] = 2;
+                rottenOranges.push({i+1, j});
+                --goodOranges;
+            }
+            if(j-1 >= 0 && grid[i][j-1] == 1){
+                grid[i][j-1] = 2;
+                rottenOranges.push({i, j-1});
+                --goodOranges;
+            }
+            if(j+1 < cols && grid[i][j+1] == 1){
+                grid[i][j+1] = 2;
+                rottenOranges.push({i, j+1});
+                --goodOranges;
             }
         }
-        if(!q.empty())  ++result;
+        if(!rottenOranges.empty()) ++time;
     }
-    return total == count ? result : -1;
+    return goodOranges == 0 ? time : -1;
+}
+
+int main() {
+    vvi grid = {{2,1,1},{1,1,0},{0,1,1}};
+    cout << orangesRotten(grid) << endl;
 }

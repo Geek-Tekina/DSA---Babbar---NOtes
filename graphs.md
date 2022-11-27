@@ -3,13 +3,13 @@ mainly there are four approaches used, if n is number of cells (length * breadth
 1. Backtracking for `o(pow(2,n))` - (we set visited to false at the end to backtrack, uusually in questions where we have to find all possible paths)
     - Rat in a maze
     - N-Queens
-2. Graph/ DFS for `o(n)` - (we dont set visited to false at the end, usually when we have to find minimum path bec then we know first time visiting a cell is the shortest path - [whole reason explained below](#misc---imp))
+2. Graph/ DFS for `o(n)` - (we dont set visited to false at the end, usually when we have to find minimum path bec then we know first time visiting a cell is the shortest path - [whole reason explained below](#important-problems))
     - [Size of the largest region in Boolean Matrix](https://www.geeksforgeeks.org/find-length-largest-region-boolean-matrix/)
 3. Graph/ BFS for `o(n)` - (when you want to process parallely) OR (same as above, but when dfs might take infinite time, we use bfs)
     > ek jagah sey dusri jagah tak pahuchne ke liye, bfs is better than dfs kyuki ham har cells pe ye find kar rahe honge ki waha tak sabsey minimum time mai kaise pahoch sktey hai
 
     > 'q' mai agar x,y already jaa chuka hai tou mtlb yahi minimum time hai uske liye
-    - Rotten Oranges (for processing parallely)
+    - [Rotten Oranges](graphs/9_rotten_oranges.cpp) (for processing parallely)
     - [Shortest Path in a Binary Matrix](https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381547?leftPanelTab=0) (above said reason)
     - knight's tour (above said reason)
         ```cpp
