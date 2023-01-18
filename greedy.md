@@ -10,6 +10,20 @@ for i = 1 to n
 ```
 <!-- - converting arrays to a structure and `comparators` for sorting structure -->
 
+- concept of overlapping is important, like in activity selection problem, we can sort the activities based on their finish time and then we can select the activities which are not overlapping with each other.
+- concept of minimax and maximin helps to merge two overlapping arrays into one array. if the two arrrays are already sorted on the basis of arr[0] then it is common sense that for minimax -> next[0] of next array will be used (bec either it will be max for the mini or equal) and for maximin -> min(curr[1], next[1])
+    ```cpp
+        // checking if overlapping or not
+        if(cur[1] >= points[i][0]){
+            // overlapping, hence minimax and maximini
+            cur[0] = points[i][0];
+            cur[1] = min(cur[1], points[i][1]);
+        } else {    // no overlapping, hence new balloon
+            count++;
+            cur = points[i];
+        }
+    ```
+
 ### Basic Quesitions
 1. __Activity Selection__ [(gfg)](https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/)
 1. N Meetings [(striver)](https://takeuforward.org/data-structure/n-meetings-in-one-room/) - Activity selection based

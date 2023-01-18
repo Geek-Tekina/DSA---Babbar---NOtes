@@ -46,6 +46,14 @@
     - Time Complexity ??
 
 
+### Hard level
+- Prefix Function
+    - Prefix function generates an array of size n. The value of the array at index i is the length of the longest proper prefix of the substring s[0...i] which is also a suffix of this substring only.
+    - [prefix explanation and code](.assets/prefix.jpeg)
+- KMP 
+- Rabin Karp
+
+
 ### DP on Strings
 - __Longest Common Subsequence__
     - In LCS, if i and j values are equal then, 1+lcs(i-1, j-1)

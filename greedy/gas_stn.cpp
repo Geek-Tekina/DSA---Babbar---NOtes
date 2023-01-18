@@ -18,7 +18,7 @@ for every station, extra_fuel = 0
 
 Approach 2: Greedy
 the concept is if we start from S1 and get a negative extra_fuel value at S3
-then logically we S1, S2 and S3 are not good starting points
+then logically S1, S2 and S3 are not good starting points
 so we will try to use S4 as new answer and by this moment 
 we also know that we need ef to reach S4 from S1, 
 so we will store it in req_fuel
