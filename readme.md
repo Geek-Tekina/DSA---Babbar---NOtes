@@ -1,7 +1,11 @@
 # README.MD
 
-- [x] [Pointers](pointers.cpp)
-- [x] [STL](#stl)
+- [ ] Interview Questions
+    - [Time-complexity](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
+        - [Sorting algos](https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/)
+    - [C++](https://www.interviewbit.com/cpp-interview-questions/)
+    - [Pointers](pointers.cpp)
+    - [STL](#stl)
 - [x] Recursion - refer copy
 - [x] [Trees (Binary Trees and BST)](trees.md)
 - [x] [Graphs / Backtracking-Tips](graphs.md)
@@ -11,8 +15,7 @@
 - [x] [Binary Search](binary_search.md)
 - [ ] [Array](arrays.md)
 - [x] [Stacks and Queues](stacks_queues.md)
-- [x] DP 1 - refer copy
-- [ ] DP 2
+- [x] Dynamic Programming (_refer copy_)
 - [ ] [Greedy Algos](greedy.md)
 
 <hr>
@@ -51,7 +54,7 @@ Operations of iterators :-
 - Use `#include <bits/stdc++.h>` instead of many includes.
 - `++i` is always better than i++, as sometimes i++ creates a copy of the object
 - what is `modulo 10e9 + 7`
-- check for ODD EVEN fastly `if(n & 1) ...odd    else ...even`
+- check for ODD EVEN fastly `if(n & 1) ...odd    else ...even`, why? bec each number, EACH is even if last binary digit is 0 or else odd if its 1.
 - use `__builtin_popcount(a)` to find the count of set bits
 - Time Complexity from given n-based constraint
     - n ≤ 12, the time complexity can be O(n!).

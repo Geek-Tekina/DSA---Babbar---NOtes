@@ -14,6 +14,9 @@
 - simplified `atoi`
     ```cpp
     // from babbar video
+    char val = '9';
+    cout << val - '0';
+    // it will subtract the ascii code of 0 from val and convert to int
     ```
 
 ### Easy-Medium level Problems
