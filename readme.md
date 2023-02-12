@@ -3,7 +3,7 @@
 - [ ] Interview Questions
     - [Time-complexity](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
         - [Sorting algos](https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/)
-    - [C++](https://www.interviewbit.com/cpp-interview-questions/)
+    - [C++](https://drive.google.com/file/d/1ko40KzY_JU-iuQ6p8HMNBDYeOR2jrfuE/view?usp=share_link)
     - [Pointers](pointers.cpp)
     - [STL](#stl)
 - [x] Recursion - refer copy
