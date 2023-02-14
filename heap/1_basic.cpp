@@ -2,51 +2,55 @@
 #include <vector>
 using namespace std;
 
-void heapify(vector<int> &arr, int n, int i) {
+void heapifyTopDown(vector<int> &arr, int i) {
     int largest = i;
     int l = 2 * i + 1;
     int r = 2 * i + 2;
 
-    if (l < n && arr[l] > arr[largest])
-        largest = l;
+    if (l < n && arr[l] > arr[largest]) largest = l;
+    if (r < n && arr[r] > arr[largest]) largest = r;
 
-    if (r < n && arr[r] > arr[largest])
-        largest = r;
-
-    // if largest is not root
+    // if largest is not root, else leave
     if (largest != i) {
         swap(arr[i], arr[largest]);
         // Recursively heapify the affected sub-tree
-        heapify(arr, n, largest);
+        heapify(arr, largest);
     }
-    // but if largest is actually already the root, 
-    // then we don't need to do anything 
 }
 
-void buildHeap(vector<int> &arr, int n){
-    int last_non_leaf_index = (n-1)/2;
+void buildHeap(vector<int> &arr){
+    int last_non_leaf_index = (arr.size()-1)/2;
     while(last_non_leaf_index >= 0){
-        heapify(arr, n, last_non_leaf_index);
+        heapifyTopDown(arr, last_non_leaf_index);
         last_non_leaf_index--;
     }
 }
 
-void insertion(vector<int> &arr, int n, int value){
-    ++n;
-    arr.push_back(value);
-    int parent_of_this_new_node_index = (n-1)/2;
-    heapify(arr, n, parent_of_this_new_node_index);
-}
-
-void deletion(vector<int> &arr, int n){
+void deletion(vector<int> &arr){
+    int n = arr.size();
     swap(arr[0], arr[n-1]);
     arr.pop_back();
-    n--;
-    heapify(arr, n, 0);
+    heapifyTopDown(arr, 0);
 }
 
-void printHeap(vector<int> &arr, int n){
-    for(int i=0; i<n; i++){
+// ---------
+
+void heapifyBottomUp(vector<int> &arr, int i){
+    int parent = (i-1)/2;
+    // max heap
+    if(arr[i] > arr[parent]){
+        swap(arr[i], arr[parent]);
+        heapifyBottomUp(arr, parent);
+    }
+}
+
+void insertion(vector<int> &arr, int value){
+    arr.push_back(value);
+    heapifyBottomUp(arr, arr.size()-1);
+}
+
+void printHeap(vector<int> &arr){
+    for(int i=0; i<arr.size(); i++){
         cout << arr[i] << " ";
     }
     cout << endl;
@@ -55,13 +59,13 @@ void printHeap(vector<int> &arr, int n){
 int main(){
     vector<int> arr = {10, 9, 8, 15, 17};
 
-    printHeap(arr, arr.size());
-    buildHeap(arr, arr.size());
-    printHeap(arr, arr.size());
-    insertion(arr, arr.size(), 12);
-    printHeap(arr, arr.size());
-    deletion(arr, arr.size());
-    printHeap(arr, arr.size());
+    printHeap(arr);
+    buildHeap(arr);
+    printHeap(arr);
+    insertion(arr, 12);
+    printHeap(arr);
+    deletion(arr);
+    printHeap(arr);
 
     return 0;
 }
