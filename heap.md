@@ -1,11 +1,11 @@
 ### Introduction to Heap
 - Heap questions are often related to sorting
-- It is used to implement priority_queue
+- It is used to implement [priority_queue](heap/2_pq.cpp)
 - It is a __complete binary tree__ that satisifies the __heap property__
     - a _complete binary tree_ is a binary tree which is completely filled, with the possible exception of the bottom level, which is filled from left to right
     - max heap property is the root is greater than or equal to its children
     - min heap property is the root is less than or equal to its children
-- NOTE : Evem though Heap is a tree-based data structure but its not implemented using node and linked list, instead it is implemented using array. And this is what makes it faster than other tree-based data structures.
+- NOTE : Even though Heap is a tree-based data structure but its not implemented using node and linked list, instead it is implemented using array. And this is what makes it faster than other tree-based data structures.
     - Therefore we wanted heap to be a complete binary tree, so it can be represented using an array and children and parent can be found using simple formula. 
     ```md
     Root is at index 0 in array.
